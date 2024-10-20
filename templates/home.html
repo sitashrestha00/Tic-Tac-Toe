@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header Section for the title -->
+    <div class="header">
+        <h1>Welcome to Tic Tac Toe</h1>
+    </div>
+
+    <!-- Container for the button -->
+    <div class="container">
+        <a id="start-btn" href="{{ url_for('game') }}">Start the Game</a>
+    </div>
+    
+    <!-- Modal for game win -->
+    <div id="win-modal">
+        <div id="win-modal-content">
+            <h2 id="win-message">X Wins!</h2>
+            <button onclick="restartGame()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the modal when the game ends
+        function showModal(winner) {
+            document.getElementById("win-message").innerText = winner + " Wins!";
+            document.getElementById("win-modal").style.display = "block";
+        }
+
+        // Function to close the modal and reload the game
+        function restartGame() {
+            document.getElementById("win-modal").style.display = "none";
+            location.reload(); // Refresh the page to restart the game
+        }
+    </script>
+</body>
+</html>

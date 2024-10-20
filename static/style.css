@@ -1,0 +1,110 @@
+/* Apply the background image */
+body {
+    background-image: url('background.jpg'); /* Make sure the image is in the static folder */
+    background-size: cover; /* Cover the whole screen */
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    font-family: 'Arial', sans-serif; /* Change the font */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header with heading at the top center */
+.header {
+    text-align: center;
+    margin-top: 0; /* No margin for top */
+}
+
+/* For heading */
+
+h1 {
+    color: #fff; /* White color for the heading text */
+    padding: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Add shadow for more aesthetic */
+    font-size: 4em;
+    background: linear-gradient(to right, #f9d423, #f83600); /* Invert gradient on hover */
+    border-radius: 10px; /* Rounded corners for the background */
+    display: inline-block; /* So that the background color only spans the text */
+    width: fit-content; /* Make the width fit the content of the heading */
+    margin-bottom: 20px; /* Add some space between heading and button */
+}
+
+/* Container to center the button */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Take the full height of the viewport */
+}
+/* For the button */
+#start-btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, #f9d423, #f83600); /* Invert gradient on hover */
+    transform: scale(1.1);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 40px auto;
+    transition: background 0.3s ease-in-out;
+}
+
+#start-btn:hover {
+    background: linear-gradient(to right, #f9d423, #f83600); /* Invert gradient on hover */
+    transform: scale(1.1);
+}
+
+#start-btn:active {
+    transform: scale(1);
+}
+
+/* Dialog Modal Styles */
+#win-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#win-modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#win-modal h2 {
+    color: #f83600; /* Color of the win message */
+}
+
+#win-modal button {
+    background-color: #f83600; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#win-modal button:hover {
+    background-color: #f9d423;
+}
